@@ -20,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuQ-Fs-7Aq">
                                 <rect key="frame" x="162" y="453" width="90" height="30"/>
                                 <state key="normal" title="GPU drawing"/>
+                                <connections>
+                                    <segue destination="8k1-Ek-ETP" kind="show" id="pDo-dc-ahJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIr-wV-a4c">
                                 <rect key="frame" x="162" y="413" width="90" height="30"/>
@@ -58,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zQ-I5-VgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="-745"/>
+            <point key="canvasLocation" x="1739" y="-820"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fz3-zZ-CYZ">
@@ -75,6 +78,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQT-HT-I7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-341" y="-644"/>
+        </scene>
+        <!--Drawing View Controller-->
+        <scene sceneID="ek3-qM-puo">
+            <objects>
+                <viewController id="8k1-Ek-ETP" customClass="GPUDrawingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YOV-TH-1Ia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xnJ-Nj-wZa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Fv-bt-G7i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787" y="-121"/>
         </scene>
     </scenes>
 </document>
