@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fTJ-q0-urq">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuQ-Fs-7Aq">
+                                <rect key="frame" x="162" y="453" width="90" height="30"/>
+                                <state key="normal" title="GPU drawing"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIr-wV-a4c">
+                                <rect key="frame" x="162" y="413" width="90" height="30"/>
+                                <state key="normal" title="CPU drawing"/>
+                                <connections>
+                                    <segue destination="UyM-es-M22" kind="show" id="kcp-2B-H15"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rIr-wV-a4c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="0PN-uM-PCo"/>
+                            <constraint firstItem="rIr-wV-a4c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="emf-m9-IKu"/>
+                            <constraint firstItem="YuQ-Fs-7Aq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hij-ZM-fMe"/>
+                            <constraint firstItem="YuQ-Fs-7Aq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="20" id="mJj-XY-nWA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YzL-Wi-Rq1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="-638"/>
+        </scene>
+        <!--CPU drawing-->
+        <scene sceneID="ADi-dv-0gQ">
+            <objects>
+                <viewController title="CPU drawing" id="UyM-es-M22" customClass="CPUDrawingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B6A-Rk-7oZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MrU-6n-qef"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOz-zB-qtC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zQ-I5-VgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703" y="-745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fz3-zZ-CYZ">
+            <objects>
+                <navigationController id="fTJ-q0-urq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bo3-fp-0EW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kNi-vR-jaC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQT-HT-I7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-341" y="-644"/>
+        </scene>
+    </scenes>
+</document>
